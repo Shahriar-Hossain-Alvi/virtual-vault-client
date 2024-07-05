@@ -4,6 +4,23 @@
     margin: 5px;
 }
 
+
+#navbarLinksMobile a{
+    margin: 2px 0 2px 0;
+    border: 1px solid transparent;
+}
+#navbarLinksMobile a.active{
+  color: #de4644;
+  background-color: transparent;
+  border: 1px solid #de4644;
+}
+
+#navbarLinksMobile a:hover{
+  color: #de4644;
+  background-color: transparent;
+  border: 1px dashed #de4644;
+}
+
 #navbarLinksPc a:hover{
     background-color: transparent;
     color: #de4644;
