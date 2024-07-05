@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../../assets/images/logo.png"
+import logo from "../../../assets/images/logo.png";
+import "./Navbar.css"
 
 const Navbar = () => {
     const navLinks = <>
@@ -49,7 +50,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul id="navbarLinksPc" className="menu menu-horizontal px-1">
                     {navLinks}
                 </ul>
             </div>

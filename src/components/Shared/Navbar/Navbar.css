@@ -1,0 +1,35 @@
+#navbarLinksPc a{
+    position: relative;
+    padding: 0;
+    margin: 5px;
+}
+
+#navbarLinksPc a:hover{
+    background-color: transparent;
+    color: #de4644;
+}
+
+#navbarLinksPc a.active{
+    color: #de4644;
+    background-color: transparent;
+}
+
+#navbarLinksPc a.active::after{
+    width: 50%;
+    height: 1px;
+    background-color: red;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+}
+
+#navbarLinksPc a.active::before{
+    width: 30%;
+    height: 1px;
+    background-color: red;
+    bottom: -3px;
+    left: 0;
+    position: absolute;
+    content: '';
+}
