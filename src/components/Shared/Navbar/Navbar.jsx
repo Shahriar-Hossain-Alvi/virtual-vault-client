@@ -19,9 +19,9 @@ const Navbar = () => {
     return (
         <div>
             {/* navbar top */}
-            <div className="bg-vv-dark-gray text-[#dddddd] font-open-sans text-sm flex justify-between gap-5 h-12">
+            <div className="bg-vv-dark-gray text-[#dddddd] font-open-sans text-sm flex">
                 {/* left side */}
-                <div className="flex items-center h-full">
+                <div className="flex w-5/6 md:w-2/3 items-center lg:w-1/2">
                     <div>
                         <select className="select bg-vv-dark-gray">
                             <option defaultValue>English</option>
@@ -42,7 +42,7 @@ const Navbar = () => {
                 </div>
 
                 {/* right side */}
-                <div>
+                <div className="lg:w-1/2 hidden lg:flex justify-end">
                     <Ripples>
                         <Link className="flex justify-center items-center h-12 px-5"><FaHeart /> Wishlist</Link>
                     </Ripples>
@@ -52,6 +52,36 @@ const Navbar = () => {
                     <Ripples>
                         <Link className="flex justify-center items-center h-12 px-5"><RiLoginBoxFill /> Login / Register</Link>
                     </Ripples>
+                </div>
+
+                <div className="w-1/6 md:w-1/3 dropdown lg:hidden justify-end flex">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul
+                        tabIndex={0}
+                        className="menu menu-sm dropdown-content dropdown-left bg-vv-dark-gray rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li>
+                            <Link className="flex justify-center items-center h-12 px-5"><FaHeart /> Wishlist</Link>
+                        </li>
+                        <li>
+                            <Link className="flex justify-center items-center h-12 px-5"><FaUser /> My Account</Link>
+                        </li>
+                        <li>
+                            <Link className="flex justify-center items-center h-12 px-5"><RiLoginBoxFill /> Login / Register</Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
