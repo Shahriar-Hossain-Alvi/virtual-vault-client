@@ -10,6 +10,11 @@ export default {
       fontFamily: {
         'open-sans': ["Open Sans", "sans-serif"],
         'raleway': ["Raleway", "sans-serif"]
+      },
+      colors:{
+        'vv-red': '#de4644',
+        'vv-black': '#222222',
+        'vv-dark-gray': '#444444'
       }
     }
   },
