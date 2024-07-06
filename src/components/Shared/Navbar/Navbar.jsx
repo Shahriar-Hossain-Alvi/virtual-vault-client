@@ -3,6 +3,8 @@ import logo from "../../../assets/images/logo.png";
 import "./Navbar.css"
 import Ripples from 'react-ripples'
 import { GiShoppingBag } from "react-icons/gi";
+import { FaHeart, FaUser } from "react-icons/fa";
+import { RiLoginBoxFill } from "react-icons/ri";
 
 const Navbar = () => {
     const navLinks = <>
@@ -17,9 +19,9 @@ const Navbar = () => {
     return (
         <div>
             {/* navbar top */}
-            <div className="bg-vv-dark-gray text-white">
+            <div className="bg-vv-dark-gray text-[#dddddd] font-open-sans text-sm flex justify-between gap-5 h-12">
                 {/* left side */}
-                <div className="flex items-center">
+                <div className="flex items-center h-full">
                     <div>
                         <select className="select bg-vv-dark-gray">
                             <option defaultValue>English</option>
@@ -27,20 +29,30 @@ const Navbar = () => {
                             <option>Hindi</option>
                         </select>
                     </div>
-                    <div>
+                    <div className="border-x">
                         <select className="select bg-vv-dark-gray">
                             <option defaultValue>USD $</option>
                             <option>BDT ৳</option>
                             <option>INR ₹</option>
                         </select>
                     </div>
-                    <div>
+                    <div className="pl-5">
                         <h4>Toll Free: +123 4567 8900</h4>
                     </div>
                 </div>
 
                 {/* right side */}
-                <div></div>
+                <div>
+                    <Ripples>
+                        <Link className="flex justify-center items-center h-12 px-5"><FaHeart /> Wishlist</Link>
+                    </Ripples>
+                    <Ripples>
+                        <Link className="border-x flex justify-center items-center h-12 px-5"><FaUser /> My Account</Link>
+                    </Ripples>
+                    <Ripples>
+                        <Link className="flex justify-center items-center h-12 px-5"><RiLoginBoxFill /> Login / Register</Link>
+                    </Ripples>
+                </div>
             </div>
 
 
