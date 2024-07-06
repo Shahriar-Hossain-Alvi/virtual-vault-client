@@ -1,0 +1,58 @@
+.slick-prev:before, .slick-next:before {
+    font-size: 40px;    
+    opacity: 1;
+    color: #de4644;
+}
+
+.slick-prev:before:hover , .slick-next:before:hover {
+    color: white;
+}
+
+.slick-prev {
+    position: absolute;
+    top: 90%;
+    left: 46%;
+    display: block;
+    width: 40px;
+    z-index: 60;
+}
+
+.slick-next {
+    position: absolute;
+    top: 90%;
+    right: 46%;
+    display: block;
+    width: 40px;
+    z-index: 60;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 575px) { 
+    .slick-prev {
+        left: 36%;
+    }
+    
+    .slick-next {
+        right: 36%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 959px) { 
+    .slick-prev {
+        left: 40%;
+    }
+    
+    .slick-next {
+        right: 40%;
+    }
+}
+@media (min-width: 960px) and (max-width: 1365px) { 
+    .slick-prev {
+        left: 44%;
+    }
+    
+    .slick-next {
+        right: 44%;
+    }
+}

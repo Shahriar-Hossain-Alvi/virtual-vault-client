@@ -5,6 +5,7 @@ import Ripples from 'react-ripples'
 import { GiShoppingBag } from "react-icons/gi";
 import { FaHeart, FaUser } from "react-icons/fa";
 import { RiLoginBoxFill } from "react-icons/ri";
+import { MdOutlineMenuOpen } from "react-icons/md";
 
 const Navbar = () => {
     const navLinks = <>
@@ -17,7 +18,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div>
+        <div className="container mx-auto">
             {/* navbar top */}
             <div className="bg-vv-dark-gray text-[#dddddd] font-open-sans text-sm flex">
                 {/* left side */}
@@ -55,30 +56,21 @@ const Navbar = () => {
                 </div>
 
                 <div className="w-1/6 md:w-1/3 dropdown lg:hidden justify-end flex">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
+                    <Ripples>
+                        <button tabIndex={0} role="button" className="btn bg-transparent border-none text-[#dddddd] hover:bg-transparent lg:hidden">
+                            <MdOutlineMenuOpen className="text-xl" />
+                        </button>
+                    </Ripples>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content dropdown-left bg-vv-dark-gray rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li>
+                        className="menu menu-sm dropdown-content dropdown-left rounded-box z-[1] mt-10 w-52 shadow bg-vv-dark-gray p-0">
+                        <li className="hover:bg-vv-red rounded-t-xl">
                             <Link className="flex justify-center items-center h-12 px-5"><FaHeart /> Wishlist</Link>
                         </li>
-                        <li>
+                        <li className="hover:bg-vv-red">
                             <Link className="flex justify-center items-center h-12 px-5"><FaUser /> My Account</Link>
                         </li>
-                        <li>
+                        <li className="hover:bg-vv-red rounded-b-xl">
                             <Link className="flex justify-center items-center h-12 px-5"><RiLoginBoxFill /> Login / Register</Link>
                         </li>
                     </ul>
