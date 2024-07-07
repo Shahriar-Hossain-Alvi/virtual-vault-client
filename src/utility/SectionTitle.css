@@ -1,0 +1,23 @@
+#section-title h2{
+    position: relative;
+}
+
+#section-title h2::after{
+    position: absolute;
+    content: '';
+    background-color: #de4644;
+    width: 50%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+}
+
+#section-title h2::before{
+    position: absolute;
+    content: '';
+    background-color: #de4644;
+    width: 25%;
+    height: 1px;
+    left: 0;
+    bottom: -4px;
+}

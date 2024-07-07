@@ -77,8 +77,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-
-
             {/* navbar bottom */}
             <div className="navbar">
                 <div className="navbar-start">
