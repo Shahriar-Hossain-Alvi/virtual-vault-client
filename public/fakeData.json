@@ -1,0 +1,65 @@
+[
+    {
+        "productName": "Woolen T-Shirt",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "featured": "featured",
+        "category": "women"
+    },
+    {
+        "productName": "Silk Skirt",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "featured": "featured",
+        "category": "women"
+    },
+    {
+        "productName": "Woolen T-Shirt Ash",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "featured": "featured",
+        "category": "women"
+    },
+    {
+        "productName": "T-Shirt for women",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "featured": "featured",
+        "category": "women"
+    },
+    {
+        "productName": "Stylish Office Shirt",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "featured": "featured",
+        "category": "men"
+    },
+    {
+        "productName": "Modern Sporty black cap",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "featured": "featured",
+        "category": "men"
+    },
+    {
+        "productName": "Red Woolen Coat",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "featured": "featured",
+        "category": "children"
+    },
+    {
+        "productName": "Smartwatch",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "featured": "featured",
+        "category": "accessories"
+    },
+    {
+        "productName": "Smartwatch2",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "featured": "featured",
+        "category": "accessories"
+    }
+]

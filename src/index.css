@@ -4,8 +4,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.slickPrev{
-    color: blue;
-    background-color: red;
-}

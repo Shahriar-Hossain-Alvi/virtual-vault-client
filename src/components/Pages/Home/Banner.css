@@ -1,7 +1,7 @@
 .slick-prev:before, .slick-next:before {
     font-size: 40px;    
     opacity: 1;
-    color: #de4644;
+    color: #ff0400;
 }
 
 .slick-prev:before:hover , .slick-next:before:hover {

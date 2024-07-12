@@ -12,7 +12,7 @@ export default {
         'raleway': ["Raleway", "sans-serif"]
       },
       colors:{
-        'vv-red': '#de4644',
+        'vv-red': '#ff0400', //de4644
         'vv-black': '#222222',
         'vv-dark-gray': '#444444'
       }
