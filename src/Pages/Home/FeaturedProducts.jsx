@@ -1,14 +1,25 @@
-import SectionTitle from "../../../utility/SectionTitle/SectionTitle";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import AllFeaturedProducts from "../../../utility/FeaturedProductCard/AllFeaturedProducts";
-import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
+import SectionTitle from '../../utility/SectionTitle/SectionTitle';
+import AllFeaturedProducts from '../../utility/FeaturedProducts/AllFeaturedProducts';
+import useAxiosPublic from '../../components/hooks/useAxiosPublic';
+
 
 const FeaturedProducts = () => {
     const axiosPublic = useAxiosPublic();
 
-    const {} = useQuery()
+    const { data: allFeaturedProducts = [], isLoading, isError, error } = useQuery({
+        queryKey: ['AllFeaturedProducts'],
+        queryFn: async () => {
+            const res = await axiosPublic.get('/allFeaturedProducts');
+            return res.data;
+        }
+    });
+
+
+
+    console.log(allFeaturedProducts);
 
     return (
         <div className="mb-24">
@@ -17,7 +28,7 @@ const FeaturedProducts = () => {
             <div>
                 <Tabs>
                     <TabList className='max-w-96 mx-auto flex text-vv-dark-gray font-medium cursor-pointer mb-8'>
-                    
+
                         <Tab className="border-l border-vv-dark-gray px-5" selectedClassName="text-vv-red">All</Tab>
 
                         <Tab className="border-x border-vv-dark-gray px-5" selectedClassName="text-vv-red">Men</Tab>
@@ -31,7 +42,7 @@ const FeaturedProducts = () => {
 
 
                     <TabPanel>
-                        <AllFeaturedProducts></AllFeaturedProducts>
+                        <AllFeaturedProducts isLoading={isLoading} error={error} isError={isError}></AllFeaturedProducts>
                     </TabPanel>
                     <TabPanel>
                         <h2>Men</h2>

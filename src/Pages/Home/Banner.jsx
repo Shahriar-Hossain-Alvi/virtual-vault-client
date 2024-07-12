@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import Slider from "react-slick";
-import bannerImage from "../../../assets/images/banner/page-1-banner.jpg"
-import bannerImage2 from "../../../assets/images/banner/home-2-banner-2.jpg"
-import bannerImage3 from "../../../assets/images/banner/ms-surface-pro.png"
+import bannerImage from "../../assets/images/banner/page-1-banner.jpg"
+import bannerImage2 from "../../assets/images/banner/home-2-banner-2.jpg"
+import bannerImage3 from "../../assets/images/banner/ms-surface-pro.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Banner.css"
