@@ -1,11 +1,17 @@
-import SectionTitle from "../../../utility/SectionTitle";
+import SectionTitle from "../../../utility/SectionTitle/SectionTitle";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import AllFeaturedProducts from "../../../utility/FeaturedProductCard/AllFeaturedProducts";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { useQuery } from "@tanstack/react-query";
 
 const FeaturedProducts = () => {
+    const axiosPublic = useAxiosPublic();
+
+    const {} = useQuery()
 
     return (
-        <div className="mb-96">
+        <div className="mb-24">
             <SectionTitle title={'Featured Products'}></SectionTitle>
 
             <div>
@@ -25,7 +31,7 @@ const FeaturedProducts = () => {
 
 
                     <TabPanel>
-                        <h2>All</h2>
+                        <AllFeaturedProducts></AllFeaturedProducts>
                     </TabPanel>
                     <TabPanel>
                         <h2>Men</h2>

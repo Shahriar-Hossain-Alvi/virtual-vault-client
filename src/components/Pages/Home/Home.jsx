@@ -7,8 +7,6 @@ const Home = () => {
         <div className="container mx-auto">
             <Banner></Banner>
             <FeaturedProducts></FeaturedProducts>
-
-            <button className="btn btn-lg bg-[#ff0400] text-white">clock</button>
         </div>
     );
 };
