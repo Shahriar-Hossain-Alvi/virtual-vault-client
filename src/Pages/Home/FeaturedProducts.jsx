@@ -1,25 +1,11 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { useQuery } from "@tanstack/react-query";
 import SectionTitle from '../../utility/SectionTitle/SectionTitle';
-import AllFeaturedProducts from '../../utility/FeaturedProducts/AllFeaturedProducts';
-import useAxiosPublic from '../../components/hooks/useAxiosPublic';
+import AllFeaturedProducts from '../../components/FeaturedProducts/AllFeaturedProducts/AllFeaturedProducts';
 
 
 const FeaturedProducts = () => {
-    const axiosPublic = useAxiosPublic();
 
-    const { data: allFeaturedProducts = [], isLoading, isError, error } = useQuery({
-        queryKey: ['AllFeaturedProducts'],
-        queryFn: async () => {
-            const res = await axiosPublic.get('/allFeaturedProducts');
-            return res.data;
-        }
-    });
-
-
-
-    console.log(allFeaturedProducts);
 
     return (
         <div className="mb-24">
@@ -42,7 +28,7 @@ const FeaturedProducts = () => {
 
 
                     <TabPanel>
-                        <AllFeaturedProducts isLoading={isLoading} error={error} isError={isError}></AllFeaturedProducts>
+                        <AllFeaturedProducts></AllFeaturedProducts>
                     </TabPanel>
                     <TabPanel>
                         <h2>Men</h2>
