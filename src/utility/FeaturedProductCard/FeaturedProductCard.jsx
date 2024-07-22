@@ -5,6 +5,8 @@ import { FaBasketShopping, FaHeart, FaShuffle } from 'react-icons/fa6';
 
 const FeaturedProductCard = ({ singleFeaturedProducts }) => {
 
+    
+
     const { productName, productPrice, productRating, productImage } = singleFeaturedProducts;
 
     console.log(singleFeaturedProducts);
@@ -46,8 +48,8 @@ const FeaturedProductCard = ({ singleFeaturedProducts }) => {
 
                 <div>
                     <div>
-                        <Rating className='max-w-24 text-vv-red'
-                            // style={{ maxWidth: 180,  border:0 }}
+                        <Rating
+                            className='max-w-24'
                             value={productRating}
                             readOnly
                         />

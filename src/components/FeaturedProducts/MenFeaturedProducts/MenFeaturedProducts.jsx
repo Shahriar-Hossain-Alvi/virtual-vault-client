@@ -1,17 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
+// import useAxiosPublic from "../../hooks/useAxiosPublic";
+import axios from "axios";
 import MangnifyingGlassLoading from "../../../utility/MangnifyingGlassLoading/MangnifyingGlassLoading";
-import PropTypes from 'prop-types';
-import useAxiosPublic from "../../hooks/useAxiosPublic";
 import FeaturedProductCard from "../../../utility/FeaturedProductCard/FeaturedProductCard";
 
-const AllFeaturedProducts = () => {
+const MenFeaturedProducts = () => {
 
-    const axiosPublic = useAxiosPublic();
+    // TODO: use axiosPublic when internet available and create a api route for Men Products
 
-    const { data: allFeaturedProducts = [], isLoading, isError, error } = useQuery({
-        queryKey: ['AllFeaturedProducts'],
+    // const axiosPublic = useAxiosPublic();
+
+    const { data: MenFeaturedProducts = [], isLoading, isError, error } = useQuery({
+        queryKey: ['MenFeaturedProducts'],
         queryFn: async () => {
-            const res = await axiosPublic.get('/allFeaturedProducts');
+            // const res = await axiosPublic.get(');
+            const res = await axios.get('./fakeData.json');
             return res.data;
         },
     });
@@ -29,22 +32,20 @@ const AllFeaturedProducts = () => {
     }
 
 
+
+    // TODO: do the conditioning in the server side
     return (
         <div className="grid gap-8 grid-cols-4">
             {
-                allFeaturedProducts?.map(singleFeaturedProducts => <FeaturedProductCard 
-                    key={singleFeaturedProducts._id} 
+                MenFeaturedProducts?.map(singleFeaturedProducts =>
+                    singleFeaturedProducts.category === 'men' &&
+                    <FeaturedProductCard
+                    key={singleFeaturedProducts._id}
                     singleFeaturedProducts={singleFeaturedProducts}
-                    ></FeaturedProductCard>)
+                ></FeaturedProductCard>)
             }
         </div>
     );
 };
 
-AllFeaturedProducts.propTypes = {
-    isLoading: PropTypes.bool,
-    isError: PropTypes.bool,
-    error: PropTypes.object,
-}
-
-export default AllFeaturedProducts;
+export default MenFeaturedProducts;

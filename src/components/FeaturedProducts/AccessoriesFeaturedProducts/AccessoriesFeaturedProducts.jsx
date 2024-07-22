@@ -1,21 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import MangnifyingGlassLoading from "../../../utility/MangnifyingGlassLoading/MangnifyingGlassLoading";
-import PropTypes from 'prop-types';
-import useAxiosPublic from "../../hooks/useAxiosPublic";
 import FeaturedProductCard from "../../../utility/FeaturedProductCard/FeaturedProductCard";
 
-const AllFeaturedProducts = () => {
 
-    const axiosPublic = useAxiosPublic();
+const AccessoriesFeaturedProducts = () => {
 
-    const { data: allFeaturedProducts = [], isLoading, isError, error } = useQuery({
-        queryKey: ['AllFeaturedProducts'],
+    // TODO: use axiosPublic when internet available and create a api route for Men Products
+
+    // const axiosPublic = useAxiosPublic();
+
+    const { data: AccessoriesFeaturedProducts = [], isLoading, isError, error } = useQuery({
+        queryKey: ['AccessoriesFeaturedProducts'],
         queryFn: async () => {
-            const res = await axiosPublic.get('/allFeaturedProducts');
+            // const res = await axiosPublic.get(');
+            const res = await axios.get('./fakeData.json');
             return res.data;
         },
     });
-
 
     if (isLoading) return <MangnifyingGlassLoading></MangnifyingGlassLoading>
 
@@ -29,22 +31,19 @@ const AllFeaturedProducts = () => {
     }
 
 
+    // TODO: do the conditioning in the server side
     return (
         <div className="grid gap-8 grid-cols-4">
             {
-                allFeaturedProducts?.map(singleFeaturedProducts => <FeaturedProductCard 
-                    key={singleFeaturedProducts._id} 
+                AccessoriesFeaturedProducts?.map(singleFeaturedProducts =>
+                    singleFeaturedProducts.category === 'accessories' &&
+                    <FeaturedProductCard
+                    key={singleFeaturedProducts._id}
                     singleFeaturedProducts={singleFeaturedProducts}
-                    ></FeaturedProductCard>)
+                ></FeaturedProductCard>)
             }
         </div>
     );
 };
 
-AllFeaturedProducts.propTypes = {
-    isLoading: PropTypes.bool,
-    isError: PropTypes.bool,
-    error: PropTypes.object,
-}
-
-export default AllFeaturedProducts;
+export default AccessoriesFeaturedProducts;

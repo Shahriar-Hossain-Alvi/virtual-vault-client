@@ -2,6 +2,10 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import SectionTitle from '../../utility/SectionTitle/SectionTitle';
 import AllFeaturedProducts from '../../components/FeaturedProducts/AllFeaturedProducts/AllFeaturedProducts';
+import MenFeaturedProducts from '../../components/FeaturedProducts/MenFeaturedProducts/MenFeaturedProducts';
+import WomenFeaturedProducts from '../../components/FeaturedProducts/WomenFeaturedProducts/WomenFeaturedProducts';
+import ChildrenFeaturedProducts from '../../components/FeaturedProducts/ChildrenFeaturedProducts/ChildrenFeaturedProducts';
+import AccessoriesFeaturedProducts from '../../components/FeaturedProducts/AccessoriesFeaturedProducts/AccessoriesFeaturedProducts';
 
 
 const FeaturedProducts = () => {
@@ -28,19 +32,19 @@ const FeaturedProducts = () => {
 
 
                     <TabPanel>
-                        <AllFeaturedProducts></AllFeaturedProducts>
+                        <AllFeaturedProducts />
                     </TabPanel>
                     <TabPanel>
-                        <h2>Men</h2>
+                        <MenFeaturedProducts />
                     </TabPanel>
                     <TabPanel>
-                        <h2>Women</h2>
+                        <WomenFeaturedProducts />
                     </TabPanel>
                     <TabPanel>
-                        <h2>Children</h2>
+                        <ChildrenFeaturedProducts />
                     </TabPanel>
                     <TabPanel>
-                        <h2>Accessories</h2>
+                        <AccessoriesFeaturedProducts />
                     </TabPanel>
                 </Tabs>
             </div>
