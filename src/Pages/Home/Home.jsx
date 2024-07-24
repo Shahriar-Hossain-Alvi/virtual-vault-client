@@ -1,12 +1,15 @@
-import Banner from "./Banner";
+
+import Banner from "./Banner/Banner";
 import FeaturedProducts from "./FeaturedProducts";
+import NewProductAnnounce from "./NewProductAnnounce";
 
 
 const Home = () => {
     return (
-        <div className="container mx-auto">
-            <Banner></Banner>
-            <FeaturedProducts></FeaturedProducts>
+        <div>
+            <Banner />
+            <FeaturedProducts />
+            <NewProductAnnounce />
         </div>
     );
 };

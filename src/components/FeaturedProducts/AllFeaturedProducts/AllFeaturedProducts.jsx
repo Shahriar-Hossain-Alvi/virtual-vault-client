@@ -30,7 +30,7 @@ const AllFeaturedProducts = () => {
 
 
     return (
-        <div className="grid gap-8 grid-cols-4">
+        <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
             {
                 allFeaturedProducts?.map(singleFeaturedProducts => <FeaturedProductCard 
                     key={singleFeaturedProducts._id} 

@@ -18,7 +18,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="container mx-auto">
+        <div className="">
             {/* navbar top */}
             <div className="bg-vv-dark-gray text-[#dddddd] font-open-sans text-sm flex">
                 {/* left side */}

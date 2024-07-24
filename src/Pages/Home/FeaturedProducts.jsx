@@ -12,10 +12,10 @@ const FeaturedProducts = () => {
 
 
     return (
-        <div className="mb-24">
+        <section className="mb-24">
             <SectionTitle title={'Featured Products'}></SectionTitle>
 
-            <div>
+            <div className='container mx-auto'>
                 <Tabs>
                     <TabList className='max-w-96 mx-auto flex text-vv-dark-gray font-medium cursor-pointer mb-8'>
 
@@ -48,7 +48,7 @@ const FeaturedProducts = () => {
                     </TabPanel>
                 </Tabs>
             </div>
-        </div>
+        </section>
     );
 };
 

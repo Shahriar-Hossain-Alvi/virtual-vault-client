@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import Slider from "react-slick";
-import bannerImage from "../../assets/images/banner/page-1-banner.jpg"
-import bannerImage2 from "../../assets/images/banner/home-2-banner-2.jpg"
-import bannerImage3 from "../../assets/images/banner/ms-surface-pro.png"
+import bannerImage from "../../../assets/images/banner/page-1-banner.jpg"
+import bannerImage2 from "../../../assets/images/banner/home-2-banner-2.jpg"
+import bannerImage3 from "../../../assets/images/banner/ms-surface-pro.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Banner.css"
@@ -26,7 +26,7 @@ const Banner = () => {
 
 
     return (
-        <div className="mb-14">
+        <section className="mb-14">
             {/* carousal */}
             <div className="slider-container">
                 <Slider {...settings}>
@@ -95,35 +95,37 @@ const Banner = () => {
 
 
             {/* about */}
-            <div className="text-vv-dark-gray grid md:grid-cols-3 text-center bg-[#f1f1f1] -mt-2">
-                <div className="px-6 py-8 group">
-                    <div className="flex justify-center mb-7 gap-3">
-                        <MdLocalShipping className="text-3xl group-hover:text-vv-red transition-all ease-linear duration-300" />
-                        <h2 className="text-2xl group-hover:text-vv-red transition-all ease-linear duration-300">Free Shipping</h2>
+            <div className="bg-[#f1f1f1] -mt-2">
+                <div className="grid md:grid-cols-3 text-center container mx-auto text-vv-dark-gray">
+                    <div className="px-6 py-8 group">
+                        <div className="flex justify-center mb-7 gap-3">
+                            <MdLocalShipping className="text-3xl group-hover:text-vv-red transition-all ease-linear duration-300" />
+                            <h2 className="text-2xl group-hover:text-vv-red transition-all ease-linear duration-300">Free Shipping</h2>
+                        </div>
+
+                        <p>Get your favorites with ease! We offer free shipping for buying from verified sellers, so you can enjoy seamless shopping and hassle-free delivery.</p>
                     </div>
 
-                    <p>Get your favorites with ease! We offer free shipping for buying from verified sellers, so you can enjoy seamless shopping and hassle-free delivery.</p>
-                </div>
+                    <div className="border-y md:border-x px-6 py-8 group">
+                        <div className="flex justify-center mb-7 gap-3">
+                            <HiLifebuoy className="text-3xl group-hover:text-vv-red transition-all ease-linear duration-300" />
+                            <h2 className="text-2xl group-hover:text-vv-red transition-all ease-linear duration-300">24/7 Support</h2>
+                        </div>
 
-                <div className="border-y md:border-x px-6 py-8 group">
-                    <div className="flex justify-center mb-7 gap-3">
-                        <HiLifebuoy className="text-3xl group-hover:text-vv-red transition-all ease-linear duration-300" />
-                        <h2 className="text-2xl group-hover:text-vv-red transition-all ease-linear duration-300">24/7 Support</h2>
+                        <p>With our 24/7 support, you can count on expert assistance whenever you need it. We're committed to being there for you, around the clock</p>
                     </div>
 
-                    <p>With our 24/7 support, you can count on expert assistance whenever you need it. We're committed to being there for you, around the clock</p>
-                </div>
+                    <div className="px-6 py-8 group">
+                        <div className="flex justify-center mb-7 gap-3">
+                            <FaRegMoneyBillAlt className="text-3xl group-hover:text-vv-red transition-all ease-linear duration-300" />
+                            <h2 className="text-2xl group-hover:text-vv-red transition-all ease-linear duration-300">Cashback</h2>
+                        </div>
 
-                <div className="px-6 py-8 group">
-                    <div className="flex justify-center mb-7 gap-3">
-                        <FaRegMoneyBillAlt className="text-3xl group-hover:text-vv-red transition-all ease-linear duration-300" />
-                        <h2 className="text-2xl group-hover:text-vv-red transition-all ease-linear duration-300">Cashback</h2>
+                        <p>Unlock amazing savings with our exclusive cashback offers! Shop your favorite products and get a portion of your money back on every purchase. It's our way of saying thank you for being a valued customer!</p>
                     </div>
-
-                    <p>Unlock amazing savings with our exclusive cashback offers! Shop your favorite products and get a portion of your money back on every purchase. It's our way of saying thank you for being a valued customer!</p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

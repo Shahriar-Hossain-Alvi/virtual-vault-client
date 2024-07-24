@@ -33,7 +33,7 @@ const WomenFeaturedProducts = () => {
 
      // TODO: do the conditioning in the server side
      return (
-        <div className="grid gap-8 grid-cols-4">
+        <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
             {
                 WomenFeaturedProducts?.map(singleFeaturedProducts =>
                     singleFeaturedProducts.category === 'women' &&

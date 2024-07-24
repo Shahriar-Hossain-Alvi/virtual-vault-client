@@ -5,11 +5,7 @@ import { FaBasketShopping, FaHeart, FaShuffle } from 'react-icons/fa6';
 
 const FeaturedProductCard = ({ singleFeaturedProducts }) => {
 
-    
-
     const { productName, productPrice, productRating, productImage } = singleFeaturedProducts;
-
-    console.log(singleFeaturedProducts);
 
     return (
         <div className="group overflow-hidden">
@@ -18,7 +14,7 @@ const FeaturedProductCard = ({ singleFeaturedProducts }) => {
                     <img
                         className="h-80 w-full"
                         src={productImage}
-                        alt="Shoes" />
+                        alt={`Image of ${productName}`} />
                 </figure>
 
                 <div className="w-0 group-hover:w-20 h-full bg-black absolute right-0 top-0 opacity-70 transition-all ease-in-out duration-300 flex flex-col justify-center">
