@@ -2,19 +2,17 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import MangnifyingGlassLoading from "../../../utility/MangnifyingGlassLoading/MangnifyingGlassLoading";
 import FeaturedProductCard from "../../../utility/FeaturedProductCard/FeaturedProductCard";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 
 const AccessoriesFeaturedProducts = () => {
 
-    // TODO: use axiosPublic when internet available and create a api route for Men Products
-
-    // const axiosPublic = useAxiosPublic();
+    const axiosPublic = useAxiosPublic();
 
     const { data: AccessoriesFeaturedProducts = [], isLoading, isError, error } = useQuery({
         queryKey: ['AccessoriesFeaturedProducts'],
         queryFn: async () => {
-            // const res = await axiosPublic.get(');
-            const res = await axios.get('./fakeData.json');
+            const res = await axiosPublic.get('/accessoriesFeaturedProducts');
             return res.data;
         },
     });
@@ -31,12 +29,10 @@ const AccessoriesFeaturedProducts = () => {
     }
 
 
-    // TODO: do the conditioning in the server side
     return (
         <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
             {
                 AccessoriesFeaturedProducts?.map(singleFeaturedProducts =>
-                    singleFeaturedProducts.category === 'accessories' &&
                     <FeaturedProductCard
                     key={singleFeaturedProducts._id}
                     singleFeaturedProducts={singleFeaturedProducts}
