@@ -1,17 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
 import MangnifyingGlassLoading from "../../../utility/MangnifyingGlassLoading/MangnifyingGlassLoading";
-import FeaturedProductCard from "../../../utility/FeaturedProductCard/FeaturedProductCard";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import FeaturedProductCard from "../../../utility/FeaturedProductCard/FeaturedProductCard";
 
 
-const AccessoriesFeaturedProducts = () => {
-
+const FurnituresFFeaturedProducts = () => {
     const axiosPublic = useAxiosPublic();
 
-    const { data: AccessoriesFeaturedProducts = [], isLoading, isError, error } = useQuery({
-        queryKey: ['AccessoriesFeaturedProducts'],
+    const { data: furnituresFeaturedProducts = [], isLoading, isError, error } = useQuery({
+        queryKey: ['furnituresFeaturedProducts'],
         queryFn: async () => {
-            const res = await axiosPublic.get('/accessoriesFeaturedProducts');
+            const res = await axiosPublic.get('/furnituresFeaturedProducts');
             return res.data;
         },
     });
@@ -31,14 +30,14 @@ const AccessoriesFeaturedProducts = () => {
     return (
         <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
             {
-                AccessoriesFeaturedProducts?.map(singleFeaturedProducts =>
+                furnituresFeaturedProducts.map(singleFeaturedProducts =>
                     <FeaturedProductCard
-                    key={singleFeaturedProducts._id}
-                    singleFeaturedProducts={singleFeaturedProducts}
-                ></FeaturedProductCard>)
+                        key={singleFeaturedProducts._id}
+                        singleFeaturedProducts={singleFeaturedProducts}
+                    ></FeaturedProductCard>)
             }
         </div>
     );
 };
 
-export default AccessoriesFeaturedProducts;
+export default FurnituresFFeaturedProducts;

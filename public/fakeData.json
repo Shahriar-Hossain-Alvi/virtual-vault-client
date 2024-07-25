@@ -53,19 +53,54 @@
         "productPrice": 99.00,
         "productRating": 4.5,
         "featured": "featured",
-        "category": "accessories"
+        "category": "electronics"
     },
     {
         "productName": "Smartwatch2",
         "productPrice": 99.00,
         "productRating": 4.5,
         "featured": "featured",
-        "category": "accessories"
+        "category": "electronics"
     },
     {
         "productName": "microsoft surface pro",
         "productPrice": 299.00,
         "productRating": 4.5,
-        "category": "accessories"
+        "category": "electronics"
+    },
+    {
+        "productName": "Samsung-GTS",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "category": "electronics",
+        "productImage":"https://i.ibb.co/7KQ6Bff/samsung-gts.jpg"
+    },
+    {
+        "productName": "Samsung Notebook",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "category": "electronics",
+        "productImage":"https://i.ibb.co/CJJPpDD/samsung-notebook.jpg"
+    },
+    {
+        "productName": "Iphone 6s plus",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "category": "electronics",
+        "productImage":"https://i.ibb.co/CJJPpDD/samsung-notebook.jpg"
+    },
+    {
+        "productName": "Iphone 6s plus",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "category": "electronics",
+        "productImage":"https://i.ibb.co/4R8dRWQ/iphone-6s-plus.jpg"
+    },
+    {
+        "productName": "HTC-Bluray 35",
+        "productPrice": 99.00,
+        "productRating": 4.5,
+        "category": "electronics",
+        "productImage":"https://i.ibb.co/tCB3yYW/htc-bluray-35.jpg"
     }
 ]

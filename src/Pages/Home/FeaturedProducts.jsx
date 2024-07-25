@@ -5,7 +5,8 @@ import AllFeaturedProducts from '../../components/FeaturedProducts/AllFeaturedPr
 import MenFeaturedProducts from '../../components/FeaturedProducts/MenFeaturedProducts/MenFeaturedProducts';
 import WomenFeaturedProducts from '../../components/FeaturedProducts/WomenFeaturedProducts/WomenFeaturedProducts';
 import ChildrenFeaturedProducts from '../../components/FeaturedProducts/ChildrenFeaturedProducts/ChildrenFeaturedProducts';
-import AccessoriesFeaturedProducts from '../../components/FeaturedProducts/AccessoriesFeaturedProducts/AccessoriesFeaturedProducts';
+import ElectronicsFeaturedProducts from '../../components/FeaturedProducts/ElectronicsFeaturedProducts/ElectronicsFeaturedProducts';
+import FurnituresFFeaturedProducts from '../../components/FeaturedProducts/FurnituresFFeaturedProducts/FurnituresFFeaturedProducts';
 
 
 const FeaturedProducts = () => {
@@ -27,7 +28,9 @@ const FeaturedProducts = () => {
 
                         <Tab className="border-x border-vv-dark-gray px-5" selectedClassName="text-vv-red">Children</Tab>
 
-                        <Tab className="border-r border-vv-dark-gray px-5" selectedClassName="text-vv-red">Accessories</Tab>
+                        <Tab className="border-r border-vv-dark-gray px-5" selectedClassName="text-vv-red">Electronics</Tab>
+
+                        <Tab className="border-r border-vv-dark-gray px-5" selectedClassName="text-vv-red">Furnitures</Tab>
                     </TabList>
 
 
@@ -44,7 +47,10 @@ const FeaturedProducts = () => {
                         <ChildrenFeaturedProducts />
                     </TabPanel>
                     <TabPanel>
-                        <AccessoriesFeaturedProducts />
+                        <ElectronicsFeaturedProducts />
+                    </TabPanel>
+                    <TabPanel>
+                        <FurnituresFFeaturedProducts />
                     </TabPanel>
                 </Tabs>
             </div>
