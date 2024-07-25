@@ -61,5 +61,11 @@
         "productRating": 4.5,
         "featured": "featured",
         "category": "accessories"
+    },
+    {
+        "productName": "microsoft surface pro",
+        "productPrice": 299.00,
+        "productRating": 4.5,
+        "category": "accessories"
     }
 ]

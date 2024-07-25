@@ -29,7 +29,7 @@ const MenFeaturedProducts = () => {
 
 
     return (
-        <div className="grid gap-8 grid-cols-4">
+        <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
             {
                 MenFeaturedProducts?.map(singleFeaturedProducts =>
                     <FeaturedProductCard

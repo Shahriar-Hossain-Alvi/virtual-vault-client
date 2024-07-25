@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import MangnifyingGlassLoading from "../../../utility/MangnifyingGlassLoading/MangnifyingGlassLoading";
 import FeaturedProductCard from "../../../utility/FeaturedProductCard/FeaturedProductCard";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
