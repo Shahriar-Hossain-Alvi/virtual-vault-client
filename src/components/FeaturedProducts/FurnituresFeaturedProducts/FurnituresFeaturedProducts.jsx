@@ -4,8 +4,10 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import FeaturedProductCard from "../../../utility/FeaturedProductCard/FeaturedProductCard";
 
 
-const FurnituresFFeaturedProducts = () => {
+const FurnituresFeaturedProducts = () => {
     const axiosPublic = useAxiosPublic();
+
+    //todo make api for furniture
 
     const { data: furnituresFeaturedProducts = [], isLoading, isError, error } = useQuery({
         queryKey: ['furnituresFeaturedProducts'],
@@ -40,4 +42,4 @@ const FurnituresFFeaturedProducts = () => {
     );
 };
 
-export default FurnituresFFeaturedProducts;
+export default FurnituresFeaturedProducts;

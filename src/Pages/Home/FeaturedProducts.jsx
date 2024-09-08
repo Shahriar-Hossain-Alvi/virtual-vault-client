@@ -6,7 +6,7 @@ import MenFeaturedProducts from '../../components/FeaturedProducts/MenFeaturedPr
 import WomenFeaturedProducts from '../../components/FeaturedProducts/WomenFeaturedProducts/WomenFeaturedProducts';
 import ChildrenFeaturedProducts from '../../components/FeaturedProducts/ChildrenFeaturedProducts/ChildrenFeaturedProducts';
 import ElectronicsFeaturedProducts from '../../components/FeaturedProducts/ElectronicsFeaturedProducts/ElectronicsFeaturedProducts';
-import FurnituresFFeaturedProducts from '../../components/FeaturedProducts/FurnituresFFeaturedProducts/FurnituresFFeaturedProducts';
+import FurnituresFeaturedProducts from '../../components/FeaturedProducts/FurnituresFeaturedProducts/FurnituresFeaturedProducts';
 
 
 const FeaturedProducts = () => {
@@ -18,7 +18,7 @@ const FeaturedProducts = () => {
 
             <div className='container mx-auto'>
                 <Tabs>
-                    <TabList className='max-w-96 mx-auto flex text-vv-dark-gray font-medium cursor-pointer mb-8'>
+                    <TabList className='max-w-[600px] mx-auto flex text-vv-dark-gray font-medium cursor-pointer mb-8'>
 
                         <Tab className="border-l border-vv-dark-gray px-5" selectedClassName="text-vv-red">All</Tab>
 
@@ -50,7 +50,7 @@ const FeaturedProducts = () => {
                         <ElectronicsFeaturedProducts />
                     </TabPanel>
                     <TabPanel>
-                        <FurnituresFFeaturedProducts />
+                        <FurnituresFeaturedProducts />
                     </TabPanel>
                 </Tabs>
             </div>
