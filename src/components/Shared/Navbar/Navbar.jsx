@@ -51,10 +51,11 @@ const Navbar = () => {
                         <Link className="border-x flex justify-center items-center h-12 px-5"><FaUser /> My Account</Link>
                     </Ripples>
                     <Ripples>
-                        <Link className="flex justify-center items-center h-12 px-5"><RiLoginBoxFill /> Login / Register</Link>
+                        <Link to="loginORregister" className="flex justify-center items-center h-12 px-5"><RiLoginBoxFill /> Login / Register</Link>
                     </Ripples>
                 </div>
 
+                {/* Button for small devices */}
                 <div className="w-1/6 md:w-1/3 dropdown lg:hidden justify-end flex">
                     <Ripples>
                         <button tabIndex={0} role="button" className="btn bg-transparent border-none text-[#dddddd] hover:bg-transparent lg:hidden">
@@ -71,7 +72,7 @@ const Navbar = () => {
                             <Link className="flex justify-center items-center h-12 px-5"><FaUser /> My Account</Link>
                         </li>
                         <li className="hover:bg-vv-red rounded-b-xl">
-                            <Link className="flex justify-center items-center h-12 px-5"><RiLoginBoxFill /> Login / Register</Link>
+                            <Link to="loginORregister" className="flex justify-center items-center h-12 px-5"><RiLoginBoxFill /> Login / Register</Link>
                         </li>
                     </ul>
                 </div>
